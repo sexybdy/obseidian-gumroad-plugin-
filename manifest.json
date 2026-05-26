@@ -1,6 +1,6 @@
 {
-  "id": "obsidian-client-export",
-  "name": "Client HTML Export",
+  "id": "folio-export",
+  "name": "Folio Export",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
   "description": "Export one or more Markdown notes into a single, beautifully styled HTML document.",
