@@ -1,7 +1,7 @@
 {
-  "id": "client-html-export",
+  "id": "obseidian-gumroad-plugin-",
   "name": "Client HTML Export",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "minAppVersion": "0.15.0",
   "description": "Export one or more Markdown notes into a single, beautifully styled HTML document.",
   "author": "Wendell",
