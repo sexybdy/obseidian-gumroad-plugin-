@@ -1,0 +1,256 @@
+/* ============================================================
+   Client HTML Export — Plugin Styles  (Obsidian modal UI)
+   The exported HTML document carries its own self-contained CSS
+   defined inside DOCUMENT_CSS in main.ts.
+   ============================================================ */
+
+/* ── Modal shell ──────────────────────────────────────────── */
+.ce-modal {
+  /* Widen the default Obsidian modal */
+  --dialog-width: 560px;
+}
+
+.ce-modal .modal-content {
+  padding: 28px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.ce-modal .ce-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ce-modal h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-normal);
+  margin: 0;
+}
+
+.ce-modal .ce-subtitle {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Section label ────────────────────────────────────────── */
+.ce-section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+}
+
+/* ── File list ────────────────────────────────────────────── */
+.ce-file-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+}
+
+.ce-file-list .ce-file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  color: var(--text-normal);
+  border-bottom: 1px solid var(--background-modifier-border);
+  transition: background 0.12s;
+  cursor: grab;
+}
+
+.ce-file-list .ce-file-item:last-child {
+  border-bottom: none;
+}
+
+.ce-file-list .ce-file-item:hover {
+  background: var(--background-modifier-hover);
+}
+
+.ce-file-list .ce-file-item.ce-dragging {
+  opacity: 0.4;
+}
+
+.ce-file-list .ce-file-item.ce-drag-over {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+/* Checkbox */
+.ce-file-item input[type="checkbox"] {
+  accent-color: var(--interactive-accent);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Drag handle */
+.ce-drag-handle {
+  color: var(--text-faint);
+  font-size: 1.1rem;
+  cursor: grab;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* File icon */
+.ce-file-icon {
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+/* File name */
+.ce-file-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+/* Folder path */
+.ce-file-folder {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+/* Arrow buttons */
+.ce-arrows {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.ce-arrows button {
+  background: none;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  transition: background 0.1s;
+}
+
+.ce-arrows button:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+/* ── Options grid ─────────────────────────────────────────── */
+.ce-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ce-option-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ce-option-row label {
+  font-size: 0.88rem;
+  color: var(--text-normal);
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.ce-option-row input[type="text"],
+.ce-option-row select {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.ce-option-row input[type="text"]:focus,
+.ce-option-row select:focus {
+  border-color: var(--interactive-accent);
+}
+
+/* ── Toggles ──────────────────────────────────────────────── */
+.ce-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ce-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-normal);
+  cursor: pointer;
+}
+
+.ce-toggle-row input[type="checkbox"] {
+  accent-color: var(--interactive-accent);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* ── Action bar ───────────────────────────────────────────── */
+.ce-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.ce-btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.ce-btn:hover:not([disabled]) {
+  opacity: 0.85;
+}
+
+.ce-btn[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ce-btn-primary {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.ce-btn-secondary {
+  background: var(--background-modifier-border);
+  color: var(--text-normal);
+}
