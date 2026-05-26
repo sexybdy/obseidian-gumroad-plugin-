@@ -1,10 +1,10 @@
 {
-  "id": "client-html-export",
+  "id": "obsidian-client-export",
   "name": "Client HTML Export",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "minAppVersion": "0.15.0",
   "description": "Export one or more Markdown notes into a single, beautifully styled HTML document.",
   "author": "Wendell",
-  "authorUrl": "https://github.com/sexybdy/obseidian-gumroad-plugin-",
+  "authorUrl": "https://github.com/sexybdy/obsidian-gumroad-plugin",
   "isDesktopOnly": true
-}
+ }
